@@ -34,41 +34,41 @@ function time(){
 time();
 setInterval( time , 1000) // 1 sec me refresh hona
 
-function time2(){   
+// function time2(){   
 
-    var date = new Date();  // Date object to be created 
+//     var date = new Date();  // Date object to be created 
 
-    var hrs = date.getHours();  // 24 hrs 
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    var AMPM = '' ;     // string variable 
+//     var hrs = date.getHours();  // 24 hrs 
+//     var min = date.getMinutes();
+//     var sec = date.getSeconds();
+//     var AMPM = '' ;     // string variable 
 
 
     
     
-    document.getElementById('mins2').innerText = min + '\n'+ ' mins';
-    document.getElementById('sec2').innerText = sec + '\n'+' secs';
+//     document.getElementById('mins2').innerText = min + '\n'+ ' mins';
+//     document.getElementById('sec2').innerText = sec + '\n'+' secs';
     
 
-    if (hrs > 12 ){
-        hrs =  hrs - 12  ;
-        AMPM = 'PM';  // 
-        document.getElementById('hours2').innerText = hrs +   '\n'+ ' hour';
-        document.getElementById('AMPM2').innerText = AMPM;
+    // if (hrs > 12 ){
+    //     hrs =  hrs - 12  ;
+    //     AMPM = 'PM';  // 
+    //     document.getElementById('hours2').innerText = hrs +   '\n'+ ' hour';
+    //     document.getElementById('AMPM2').innerText = AMPM;
 
-    }
-    else {
-        document.getElementById('hours2').innerText = hrs +   '\n'+ ' hour';
-        AMPM = 'AM';
-        document.getElementById('AMPM2').innerText = AMPM;
-    }
+    // }
+    // else {
+    //     document.getElementById('hours2').innerText = hrs +   '\n'+ ' hour';
+    //     AMPM = 'AM';
+    //     document.getElementById('AMPM2').innerText = AMPM;
+    // }
  
 
     
-}
+// }
 
-time2();
-setInterval( time2 , 1000)
+// time2();
+// setInterval( time2 , 1000)
 
  
 
@@ -78,28 +78,28 @@ function getTimeDetails(){
 
 
     // For time Calculation 
-    var date = new Date();
-    var hrs = date.getHours();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    var AMPM = '' ;   
+    var date2 = new Date();
+    var hrs2 = date2.getHours();
+    var min2 = date2.getMinutes();
+    var sec2 = date2.getSeconds();
+    var AMPM2 = '' ;   
     
-    document.getElementById('mins').innerText = min + '\n'+ ' mins';
-    document.getElementById('sec').innerText = sec + '\n'+' secs';
+    document.getElementById('mins').innerText = min2 + '\n'+ ' mins';
+    document.getElementById('sec').innerText = sec2 + '\n'+' secs';
     
   
 
-    if ( hrs > 12 ){
-        hrs =  hrs - 12  ;
-        AMPM = 'PM';
-        document.getElementById('hours').innerText = hrs +   '\n'+ ' hour';
-        document.getElementById('AMPM').innerText = AMPM;
+    if ( hrs2 > 12 ){
+        hrs2 =  hrs2 - 12  ;
+        AMPM2 = 'PM';
+        document.getElementById('hours').innerText = hrs2 +   '\n'+ ' hour';
+        document.getElementById('AMPM').innerText = AMPM2;
 
     }
     else {
-        document.getElementById('hours').innerText = hrs +   '\n'+ ' hour';
-        AMPM = 'AM';
-        document.getElementById('AMPM').innerText = AMPM;
+        document.getElementById('hours').innerText = hrs2 +   '\n'+ ' hour';
+        AMPM2 = 'AM';
+        document.getElementById('AMPM').innerText = AMPM2;
     }
  
 
@@ -132,13 +132,13 @@ function getTimeDetails(){
     var img = '';
    // 7AM === 7AM
 
-    if ( (arrWakeTime[0] === arrLunchTime[0]  === arrNapTime[0] ===  arrNightTime [0]) === (hrs+AMPM) ){
+    if ( (arrWakeTime[0] === arrLunchTime[0]  === arrNapTime[0] ===  arrNightTime [0]) === (hrs2+AMPM2) ){
         console.log("Yes all the times are equal so displaying the welcome home image  ");
-        img = "<img  src='assets/welcomeHome.jpg' alt=''></img>"
+        img = "<img  src='assets/gudmrng.png' alt=''></img>"
     }
 
-   else if (arrWakeTime[0] === (hrs+AMPM)){
-            img = "<img  src='assets/Component 30 – 1.svg' alt=''>"
+   else if (arrWakeTime[0] === (hrs2+AMPM2)){
+            img = "<img  src='assets/lunch.png' alt=''>"
             document.getElementById('imageTag').innerHTML  = img;
             document.getElementById('grabSomeBreakfastheading').innerText ="GRAB SOME HEALTHY BREAKFAST    !!!. ";
             document.getElementById('messageParaAsPerTime').innerText ="GOOD MORNING  !! WAKE UP  !!   .";
@@ -152,8 +152,8 @@ function getTimeDetails(){
 
    }
 
-   else if (arrLunchTime[0] === (hrs+AMPM)){
-        img = "<img  src='assets/Component 31 – 1.svg' alt=''>"
+   else if (arrLunchTime[0] === (hrs2+AMPM2)){
+        img = "<img  src='assets/evening.png' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
         document.getElementById('grabSomeBreakfastheading').innerText ="LET'S HAVE SOME LUNCH     !!.  ";
         document.getElementById('messageParaAsPerTime').innerText ="GOOD AFTERNOON !! TAKE SOME SLEEP   !!!!!.  ";
@@ -165,8 +165,8 @@ function getTimeDetails(){
    }
 
 
-   else if (arrNapTime[0] === (hrs+AMPM)){
-    img = "<img  src='assets/goodEveningImage.png' alt=''>"
+   else if (arrNapTime[0] === (hrs2+AMPM2)){
+    img = "<img  src='assets/evening.png' alt=''>"
     document.getElementById('imageTag').innerHTML  = img;
     document.getElementById('grabSomeBreakfastheading').innerText ="STOP YAWNING, GET SOME TEA.. ITS JUST EVENING  !!!   ";
     document.getElementById('messageParaAsPerTime').innerText ="GOOD EVENING    !!  .";
@@ -178,9 +178,9 @@ function getTimeDetails(){
     }
 
 
-    else if (arrNightTime[0] === (hrs+AMPM))
+    else if (arrNightTime[0] === (hrs2+AMPM2))
     {
-        img = "<img  src='assets/goodNightImage.png' alt=''>"
+        img = "<img  src='assets/night.png' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
         document.getElementById('grabSomeBreakfastheading').innerText
          ="CLOSE YOUR EYES AND GO TO SLEEP !!!!!.";
@@ -193,38 +193,11 @@ function getTimeDetails(){
 
         console.log("Yes they  is our night time  ")
     }
-
-
-/*
-    else {
-        if ( arrNapTime[0] === (hrs+AMPM)){
-            img = "<img  src='assets/goodNightImage.png' alt=''>"
-            document.getElementById('imageTag').innerHTML  = img;
-           document.getElementById('imageTag').style.height ='70%'
-           document.getElementById('imageTag').style.width ='70%'
-           
-            
-            console.log("Yes they are equal ")
-        }
-    }
-    */
- 
-
- /*
-    var img = " <img  src='assets/goodNightImage.png' alt=''>" 
-    if ( arrNapTime[0] === (hrs+AMPM)){
-        document.getElementById('imageTag').innerHTML  = img;
-       document.getElementById('imageTag').style.height ='70%'
-       document.getElementById('imageTag').style.width ='70%'
-        
-        console.log("Yes they are equal ")
-    }
-*/
     // Testing purpose 
     
     
-    console.log(hrs);
-    console.log(AMPM);
+    console.log(hrs2);
+    console.log(AMPM2);
 
 
 
@@ -317,7 +290,7 @@ function getIamgeChangeForMobile(){
     }
 
    else if (arrWakeTimeMobile[0] === (hrs+AMPM)){
-            img = "<img  src='assets/Component 30 – 1.svg' alt=''>"
+            img = "<img  src='assets/gudmorning.png' alt=''>"
             document.getElementById('imageTag').innerHTML  = img;
             document.getElementById('grabSomeBreakfastheading').innerText ="GRAB SOME HEALTHY BREAKFAST    !!!. ";
             document.getElementById('messageParaAsPerTime').innerText ="GOOD MORNING  !! WAKE UP  !!   .";
@@ -334,7 +307,7 @@ function getIamgeChangeForMobile(){
    }
 
    else if (arrLunchTimeMobile[0] === (hrs+AMPM)){
-        img = "<img  src='assets/Component 31 – 1.svg' alt=''>"
+        img = "<img  src='assets/lunch.png' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
         document.getElementById('grabSomeBreakfastheading').innerText ="LET'S HAVE SOME LUNCH     !!.  ";
         document.getElementById('messageParaAsPerTime').innerText ="GOOD AFTERNOON !! TAKE SOME SLEEP   !!!!!.  ";
@@ -347,7 +320,7 @@ function getIamgeChangeForMobile(){
 
 
    else if (arrNapTimeMobile[0] === (hrs+AMPM)){
-    img = "<img  src='assets/goodEveningImage.png' alt=''>"
+    img = "<img  src='assets/evening.png' alt=''>"
     document.getElementById('imageTag').innerHTML  = img;
     document.getElementById('grabSomeBreakfastheading').innerText ="STOP YAWNING, GET SOME TEA.. ITS JUST EVENING  !!!   ";
     document.getElementById('messageParaAsPerTime').innerText ="GOOD EVENING    !!  .";
@@ -361,7 +334,7 @@ function getIamgeChangeForMobile(){
 
     else if (arrNightTimeMobile[0] === (hrs+AMPM))
     {
-        img = "<img  src='assets/goodNightImage.png' alt=''>"
+        img = "<img  src='assets/night.png' alt=''>"
         document.getElementById('imageTag').innerHTML  = img;
         document.getElementById('grabSomeBreakfastheading').innerText
          ="CLOSE YOUR EYES AND GO TO SLEEP !!!!!.";

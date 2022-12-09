@@ -31,7 +31,7 @@ body{
     justify-content: space-between ;
 }
 
-#messageBox{
+/* #messageBox{
     background-color: #FFFFFF;
     height: auto;
     width: 13vw;
@@ -40,7 +40,7 @@ body{
     border-radius: 2vh;
     font-size: 100%;
     color: #858585;
-}
+} */
 
 #menuBox{
     background-color: #FFFFFF;
